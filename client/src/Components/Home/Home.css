@@ -1,0 +1,45 @@
+.Container-div-home {
+    color: white;
+}
+
+.Container-card {
+    display: grid;
+    gap: 2rem;
+    grid-auto-rows: 20rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+}
+
+.container-Subnav {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter {
+    width: 33%;
+    margin: auto;
+}
+
+.poke-h1 {
+    width: 33%;
+    font-size: 26px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    letter-spacing: 10px;
+}
+
+.poke-pagination {
+    width: 33%
+}
+
+.card-title2 {
+    text-decoration: none;
+    margin: 10px;
+}
+
+.pokebola {
+    position: absolute;
+    top: 35%;
+    left: 45%
+}
