@@ -10,7 +10,7 @@ import './PokemonDetails.css'
 function PokemonDetails() {
 
     const { id } = useParams();
-
+console.log(id);
     const dispatch = useDispatch();
 
     const allDetails = useSelector((state) => state.pokemonDetail)
@@ -54,15 +54,15 @@ function PokemonDetails() {
                         </div>
                         <div className='attack-details'>
                             <h1>Attack:</h1>
-                            <p>{allDetails.attack}</p>
+                            <p>{allDetails.attack} ⚔️</p>
                         </div>
                         <div className='defense-details'>
                             <h1>Defense:</h1>
-                            <p>{allDetails.defense}</p>
+                            <p>{allDetails.defense} 🛡️</p>
                         </div>
                         <div className='speed-details'>
                             <h1>Speed:</h1>
-                            <p>{allDetails.speed}</p>
+                            <p>{allDetails.speed} ⚡</p>
                         </div>
                     </div>
                 </div>) : <div className='pokebola'>

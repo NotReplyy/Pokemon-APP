@@ -10,7 +10,9 @@
     font-family: "Lucida Console", "Courier New", monospace;
     letter-spacing: 10px;
     padding: 10px 80px;
-    border: none;
+    border-color: rgba(166,158,112,255);
+   border-width: 2px;
+   border-style: solid;
     cursor: pointer;
     border-radius: 5px;
     text-align: center;
@@ -34,6 +36,9 @@
     left:61%;
     font-size: 26px;
     padding: 5px 30px;
+    border-color: rgba(166,158,112,255);
+    border-width: 2px;
+    border-style: solid;
     font-family: "Lucida Console", "Courier New", monospace;
     letter-spacing: 10px;
 }

@@ -8,7 +8,7 @@ function Filters({ typesPokemons, handleOrderByName, handleFilterByType, handleF
   return (
     <div className='filters-order'>
       <div className='class-orderName'>
-        <label>Order By Name</label>
+        <label>Order</label>
         <select onChange={(e) => { handleOrderByName(e) }}>
           <option value='ID'>ID</option>
           <option value='ABC'>A-Z</option>
@@ -18,7 +18,7 @@ function Filters({ typesPokemons, handleOrderByName, handleFilterByType, handleF
         </select>
       </div>
       <div className='class-filterType'>
-        <label>Filter By Type</label>
+        <label>Filter Type</label>
         <select onChange={(e) => handleFilterByType(e)}>
           <option value='ALL' >All</option>
           {typesPokemons.map((type, index) => (
@@ -29,7 +29,7 @@ function Filters({ typesPokemons, handleOrderByName, handleFilterByType, handleF
         </select>
       </div>
       <div className='class-filterCreation'>
-        <label>Filter By Creation</label>
+        <label>Filter Creation</label>
         <select onChange={(e) => handleFilterByCreation(e)}>
           <option value='JOIN' >All</option>
           <option value='API'>PokeApi</option>

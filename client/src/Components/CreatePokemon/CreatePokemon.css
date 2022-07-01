@@ -20,6 +20,9 @@
     font-size: 14px;
     background-color: gainsboro;
     padding: 8px;
+    border-color: rgba(166,158,112,255);
+    border-width: 2px;
+    border-style: solid;
     
 }
 input[type=number]::-webkit-inner-spin-button, 
@@ -60,6 +63,7 @@ input[type=number] { -moz-appearance:textfield; }
     position: absolute;
     top: 60%;
     left: 42.2%;
+    
 
 }
 
@@ -70,7 +74,10 @@ input[type=number] { -moz-appearance:textfield; }
     font-size: 14px;
     background-color: gainsboro;
     width: 300px;
-    padding: 8px
+    padding: 8px;
+    border-color: rgba(166,158,112,255);
+    border-width: 2px;
+    border-style: solid;
 }
 
 .form-button button {
@@ -84,7 +91,9 @@ input[type=number] { -moz-appearance:textfield; }
     font-family: "Lucida Console", "Courier New", monospace;
     letter-spacing: 10px;
     padding: 5px 40px;
-    border: none;
+    border-color: rgba(166,158,112,255);
+    border-width: 2px;
+    border-style: solid;
     cursor: pointer;
     border-radius: 5px;
     text-align: center;

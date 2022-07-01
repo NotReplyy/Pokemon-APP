@@ -43,7 +43,7 @@ export default function CreatePokemon() {
     let errors = {};
 
     const regExVal = /^([1-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])$/
-    const regExHeigth = /^(?:(?:0\.[1-9]\d?)|(?:1[0-9]\.[0-9]\d?)|[0-1][0-9]|\d?(?:(?:\.\d\d?)?)|2[0])$/
+    const regExHeigth = /^([1-9]|[1-9][0-9]|[1][0-9][0-9]|20[0-0])$/
 
     // if (namePokemons.includes(input.name)) {
     //   errors.name = '"The pokemon already exists, use another name"';
@@ -68,7 +68,7 @@ export default function CreatePokemon() {
 
     if (!input.weight) {
       errors.weight = "Weight is required";
-    } else if (!/(?!^0*$)(?!^0*\.0*$)^\d{1,3}(\.\d{1,1})?$/.test(input.weight)) {
+    } else if (!/^([1-9]|[1-9][0-9]{1,3}|10000)$/.test(input.weight)) {
       errors.weight = "Weight is invalid";
     }
 
@@ -195,12 +195,12 @@ export default function CreatePokemon() {
             </div>
             <div className='form-height'>
               <h4 htmlFor='height'>Height</h4>
-              <input type='number' name='height' placeholder='Insert 0.1-20...' id='height' onChange={(e) => handleInputChange(e)} />
+              <input type='number' name='height' placeholder='Insert 1-200...' id='height' onChange={(e) => handleInputChange(e)} />
               {errors.height && <p>{errors.height}</p>}
             </div>
             <div className='form-weight'>
               <h4 htmlFor='weight'>Weight</h4>
-              <input type='number' name='weight' placeholder='Insert 1-999.9...' id='weight' onChange={(e) => handleInputChange(e)} />
+              <input type='number' name='weight' placeholder='Insert 1-10000...' id='weight' onChange={(e) => handleInputChange(e)} />
               {errors.weight && <p>{errors.weight}</p>}
             </div>
           </div>

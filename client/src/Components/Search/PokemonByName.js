@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom'
 import { cleanDetails, getByName } from '../../Redux/Actions/Actions';
 import Card from '../Card/Card';
-import Search from './Search';
 import imageLoading from '../../Images/10172dc2-f05e-4804-948f-94ec8a1747ce.gif'
 import './PokemonByName.css'
 
@@ -21,12 +20,11 @@ function PokemonByName() {
     }, [dispatch, name]);
 
     return (
-        <div className='div-card-Search'>
-            <Search />
+        <div className='div-card-Search'>          
             <div>
                 {namePokemons.length > 0 ? namePokemons?.map(({ name, id, types, image }) =>
                     <Link className='card-search-link' to={`/pokemons/${id}`} key={id}  >
-                        <div className='card-search'>
+                        <div className='card-searched'>
                             <Card  name={name} types={types} image={image} />
                         </div>
                     </Link>

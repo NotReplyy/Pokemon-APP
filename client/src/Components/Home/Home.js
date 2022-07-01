@@ -46,13 +46,13 @@ function Home() {
 
   const handleFilterByType = (e) => {
     e.preventDefault();
-    dispatch(filterByType(e.target.value))
+    dispatch(filterByType(e.target.value))   
     setCurrentPage(1)
   };
 
   const handleFilterByCreation = (e) => {
     e.preventDefault();
-    dispatch(filterByCreate(e.target.value))
+    dispatch(filterByCreate(e.target.value))   
     setCurrentPage(1)
   };
 
@@ -74,7 +74,9 @@ function Home() {
           .slice((currentPage - 1) * currentByPage, (currentPage - 1) * currentByPage + currentByPage)
           .map(({ name, id, types, image }) =>
             <Link className='card-title2' to={`/pokemons/${id}`} key={id}  >
-              <Card name={name} types={types} image={image} />
+              <div className='Class-Card'>
+                <Card name={name} types={types} image={image} />
+              </div>
             </Link>
           ) :
           <div className='pokebola'>
