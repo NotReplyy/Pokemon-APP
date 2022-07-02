@@ -5,9 +5,10 @@ const { Pokemon, Type } = require('../db')
 
 
 //  FETCH DE 40 POKEMON DE LA API 
+
 const getPokeAPi = async (req, res, next) => {
     try {
-        const response = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=40')
+        const response = await axios('https://pokeapi.co/api/v2/pokemon?limit=40')
         let { data } = response
         let pokemonUrls = data.results.map(d => d.url)
         let getPokemonData = await Promise.all(pokemonUrls.map((endpoint) => axios.get(endpoint)))
@@ -36,6 +37,7 @@ const getPokeAPi = async (req, res, next) => {
 
 
 // FETCH DE POKEMON DB
+
 const getDbInfo = async () => {
     let dbData = await Pokemon.findAll({ include: Type })
     const pokemonsDb = dbData.map(e => {
@@ -54,25 +56,13 @@ const getDbInfo = async () => {
 
 
 // POKEMON DE API + POKEMON DE DB
+
 const joinAllPokemon = async () => {
     let apiInfo = await getPokeAPi();
     let dbInfo = await getDbInfo();
     let infoTotal = dbInfo.concat(apiInfo);
     return infoTotal;
 }
-
-//UNIR LAS TABLAS DE ID POKEMON Y ID DE TYPE
-
-// const allPokeId = async (req, res, next) => {
-//     try {
-//         const { pokemonId, typeId } = req.params;
-//         const pokemon = await Pokemon.findByPk(pokemonId);
-//         await pokemon.addTypes(typeId);
-//         res.status(201).send(pokemon)
-//     } catch (error) {
-//         next(error)
-//     }
-// }
 
 // GET DE TODOS LOS POKEMON
 
@@ -201,7 +191,7 @@ const postPokemon = async (req, res, next) => {
         await newPokemon.addTypes(types);
         res.send(newPokemon)
     } catch (error) {
-        console.log('estoy en el catch');
+        // console.log('estoy en el catch');
         next(error)
     }
 }

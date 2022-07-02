@@ -8,6 +8,6 @@ const router = Router()
 router.get('/', getAllPokemon)
 router.post('/', postPokemon)
 router.get('/:id', getPokemonById)
-//router.post('/:pokemonId/type/:typeId', allPokeId)
+
 
 module.exports = router

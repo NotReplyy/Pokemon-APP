@@ -1,5 +1,5 @@
 import React from 'react'
-import imgBack from '../../Images/pokemon-go-logo-minimalism.jpg'
+import imgBack from '../../Images/back-landing.png'
 import { Link } from 'react-router-dom'
 import './LandingPage.css'
 
