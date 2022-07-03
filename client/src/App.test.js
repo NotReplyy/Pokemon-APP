@@ -39,7 +39,7 @@ describe("<Nav />", () => {
     expect(nav.find(NavLink).at(0).text()).toEqual("Home");
   });
 
-  it('Debería tener un segundo Link, con texto "Create Product" y que cambie la ruta hacia "/product/create"', () => {
+  it('Debería tener un segundo Link, con texto "Create Pokemon" y que cambie la ruta hacia "/create"', () => {
     expect(nav.find(NavLink).at(1).prop("to")).toEqual("/create");
     expect(nav.find(NavLink).at(1).text()).toEqual("Create Pokemon");
   });
