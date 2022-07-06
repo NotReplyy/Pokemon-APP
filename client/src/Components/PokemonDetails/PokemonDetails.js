@@ -10,7 +10,7 @@ import './PokemonDetails.css'
 function PokemonDetails() {
 
     const { id } = useParams();
-console.log(id);
+// console.log(id);
     const dispatch = useDispatch();
 
     const allDetails = useSelector((state) => state.pokemonDetail)

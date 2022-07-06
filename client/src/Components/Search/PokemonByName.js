@@ -20,18 +20,18 @@ function PokemonByName() {
     }, [dispatch, name]);
 
     return (
-        <div className='div-card-Search'>          
+        <div className='div-card-Search'>
             <div>
                 {namePokemons.length > 0 ? namePokemons?.map(({ name, id, types, image }) =>
                     <Link className='card-search-link' to={`/pokemons/${id}`} key={id}  >
                         <div className='card-searched'>
-                            <Card  name={name} types={types} image={image} />
+                            <Card name={name} types={types} image={image} />
                         </div>
                     </Link>
-                ) : 
-                <div className='pokebola'>
-                    <img className='image-loading' src={imageLoading} alt='Loading' />
-                </div>
+                ) :
+                    <div className='pokebola'>
+                        <img className='image-loading' src={imageLoading} alt='Loading' />
+                    </div>
                 }
             </div>
         </div>

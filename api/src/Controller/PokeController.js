@@ -196,6 +196,17 @@ const postPokemon = async (req, res, next) => {
     }
 }
 
+const deletePokemonById = async (req, res, next) => {
+    const {id} = req.params
+    try {
+       const deletPokemon= await Pokemon.destroy({
+        where:{id : id}
+       })
+       res.send('Pokemon has been delete') 
+    } catch (error) {
+        next(error)
+    }
+}
 
 
 
@@ -206,5 +217,6 @@ module.exports = {
     getAllPokemon,
     getPokemonById,
     postPokemon,
+    deletePokemonById
    // allPokeId
 }

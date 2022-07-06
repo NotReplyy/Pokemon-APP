@@ -3,10 +3,10 @@ import { Link, useLocation } from 'react-router-dom';
 import './Search.css'
 
 function Search() {
-    const [name, setName] = useState("")
+    const [name, setName] = useState("");
     const [msg, setMsg] = useState("");
 
-    const{pathname}= useLocation()
+    const { pathname } = useLocation()
 
     const onInputChange = (e) => {
         e.preventDefault();
@@ -20,7 +20,7 @@ function Search() {
         }
         else {
             setMsg("Please write a name");
-            
+
         }
     }
 
@@ -29,8 +29,8 @@ function Search() {
             <div className='search-Class'>
                 <form >
                     <input className='input-Search' type="text" onChange={(e) => { onInputChange(e) }} placeholder="Search..." value={name} />
-                    <Link to={!name ? `${pathname}` :`/pokemon/${name}`}>
-                        <button   className='button-Search' onClick={handleOnClick} >Search</button>
+                    <Link to={!name ? `${pathname}` : `/pokemon/${name}`}>
+                        <button className='button-Search' onClick={handleOnClick} >Search</button>
                     </Link>
                     <p className='error-search'>{msg}</p>
                 </form>
